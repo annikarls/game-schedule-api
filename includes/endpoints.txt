@@ -4,7 +4,7 @@ api/game_read.php?gameid=11
 Visa alla matcher:
 api/game_readall.php
 
-Lägga till en match:
+LÃ¤gga till en match:
 api/game_create.php
 
 Visa en arena:
@@ -13,6 +13,13 @@ api/stadium_read.php?stadiumid=1
 Visa alla arenor:
 api/stadium_readall.php
 
-Lägga till arena:
+LÃ¤gga till arena:
 api/stadium_create.php
 
+Ã„ndra arena:
+api/stadium_update.php
+(Skriv in stadiumName och stadiumId i Insomnia/Postman)
+
+Ta bort arena:
+api/stadium_delete.php
+(Skriv in stadiumId i Insomnia/Postman)

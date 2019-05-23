@@ -7,6 +7,12 @@ require("../includes/functions.php");
 
 $connection = dbConnect();
 
+if (isset($_POST['stadiumName'])) {
+    $stadiumName = $_POST['stadiumName'];
+}else {
+    echo "Ingen tillåten post (stadiumName)";
+    exit;
+}
 if (isset($_POST['stadiumId'])) {
     $stadiumId = $_POST['stadiumId'];
 }else {
@@ -14,7 +20,11 @@ if (isset($_POST['stadiumId'])) {
     exit;
 }
 
-$deleteStadium = deleteStadium($connection, $stadiumId);
+$editStadium = editStadium($connection);
+
+$stadiumData = getStadiumData($connection, $stadiumId);
+$output = $stadiumData;
+echo json_encode($output);
 
 dbDisconnect($connection);
 
